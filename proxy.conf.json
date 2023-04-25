@@ -1,0 +1,7 @@
+{
+    "/rest": {
+      "target": "https://mrb.red-bus.com.ar",
+      "secure": false
+      
+    }
+  }

@@ -1,0 +1,101 @@
+
+.logo, .menu li a {
+    font-family: 'Fredoka One', cursive;
+    color:#F4FAFF
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2D9BF0;
+    padding: 15px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    
+}
+
+.menu li a {
+    
+   
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+   
+}
+.menu li {
+    margin-top: 10px;
+  }
+
+.menu li a:hover {
+    background-color: #2980b9;
+    border-radius: 5px;
+}
+
+.toggle-btn {
+    display: none;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #2980b9;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fdfdfd;
+    margin: 3px;
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover .bar {
+    background-color: #fdfdfd;
+}
+
+@media screen and (max-width: 768px) {
+    .toggle-btn {
+        display: inline-block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu.open {
+        display: block;
+    }
+    .menu li {
+        margin-bottom: 10px; /* o el valor que desees */
+      }
+    
+      .menu li a {
+        padding: 5px 15px;
+        color: white;
+        text-decoration: none;
+        margin-top: 15px; /* o el valor que desees */
+      }
+    
+      .menu li:last-child {
+        margin-bottom: 0;
+      }
+}
+
+

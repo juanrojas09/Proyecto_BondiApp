@@ -1,0 +1,43 @@
+
+
+<!--
+<mat-card class="line-selector-card">
+    <h4 class="titulo">Selecciona una línea</h4>
+  
+    <mat-card-content>
+      <div class="dropdown-container">
+        <mat-form-field>
+          <mat-label>Selecciona una línea</mat-label>
+          <mat-select [(ngModel)]="selectedLine">
+            <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+            <!-- Agrega más opciones según las líneas que tengas -->
+        <!--  </mat-select>
+        </mat-form-field>
+        <button class="btn btn-primary action-button  " (click)="GetLine(selectedLine)">Seguir</button>
+      </div>
+      <p>Detalles de la línea seleccionada...</p>
+    </mat-card-content>
+  </mat-card>
+ 
+-->
+  <!--<app-full-screen *ngIf="showMap"></app-full-screen>  -->
+
+
+ 
+  <app-full-screen></app-full-screen> 
+ 
+
+  <div class="float-menu">
+    <button class="float-btn" (click)="toggleMenu()">
+        <i class="bi bi-list"></i>
+    </button>
+    <div class="menu-items" *ngIf="menuOpen">
+        
+      <button class="fa fa-plus my-float" *ngFor="let item of states" (touchstart)="GetLine(item);selectItem(item)" (click)="GetLine(item);selectItem(item)">
+        {{ item }}
+      </button>
+
+    </div>
+  </div>
+
+  
