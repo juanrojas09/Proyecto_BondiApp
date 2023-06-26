@@ -1,0 +1,11 @@
+{
+    "/rest/rutaLinea/*": {
+      "target": "https://mrb.red-bus.com.ar",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug"
+      }
+
+      
+  }
+  

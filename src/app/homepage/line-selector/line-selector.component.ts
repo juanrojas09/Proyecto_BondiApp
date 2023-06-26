@@ -50,10 +50,14 @@ export class LineSelectorComponent {
   }
 
   //metodo que busca una linea y devuelve un array co
+  click=false;
   GetLine(linea:string){
     this.selectedLine=linea
+    this.menuOpen=false;  
     if(linea!=''){
-var req=this.hs.getBuses(linea)
+     
+   var req=this.hs.getBuses(linea)
+   //this.hs.GetBusesStatic(this.selectedLine)
 
 
 this.showMap=true;
@@ -68,7 +72,7 @@ this.showMap=true;
   }
 
 
-
+  
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -77,7 +81,7 @@ this.showMap=true;
   selectItem(item: string) {
     console.log(`Selected item: ${item}`);
     // Do something when an item is selected
-    
+ 
     this.hs.getRoutesByLine(this.selectedLine)
   }
  

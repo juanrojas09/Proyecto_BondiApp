@@ -33,7 +33,7 @@
     </button>
     <div class="menu-items" *ngIf="menuOpen">
         
-      <button class="fa fa-plus my-float" *ngFor="let item of states" (touchstart)="GetLine(item);selectItem(item)" (click)="GetLine(item);selectItem(item)">
+      <button class="fa fa-plus my-float" [ngClass]="{ 'selected-line': item === selectedLine }" *ngFor="let item of states"  (click)="GetLine(item);selectItem(item)">
         {{ item }}
       </button>
 

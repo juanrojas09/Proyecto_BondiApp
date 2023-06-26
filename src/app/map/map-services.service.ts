@@ -16,6 +16,8 @@ export class MapServicesService {
   private markers: mapboxgl.Marker[] = [];
    private map!: mapboxgl.Map;
    subscription: Subscription = new Subscription();
+
+   lastMarker:any=[]
  
    constructor() { }
  
@@ -37,10 +39,31 @@ export class MapServicesService {
    }
  
 
+   setRecorridoEstatico(arr:any){
+    console.log("latitud",arr.latitud)
+    console.log("longitud",arr.longitud)
+  
+    // Verifica si lastMarker existe y si tiene la función remove()
+    if (this.lastMarker && typeof this.lastMarker.remove === 'function') {
+      this.lastMarker.remove();
+    }
+  
+    const marker = new mapboxgl.Marker({
+      element: this.createMarkerElement(this.busIcon)
+    }).setLngLat([arr.longitud, arr.latitud]);
+  
+    // Guarda el marcador en lastMarker para su uso en el siguiente ciclo
+    this.lastMarker = marker;
+  
+    // Agrega el marcador al mapa
+    this.lastMarker.addTo(this.map);  // Asegúrate de reemplazar 'this.map' con la referencia a tu objeto de mapa
+  
+    this.markers.push(marker);
+  }
 
-   setLatLong(posiciones: any[]) {
-    
-    
+
+//seteo la posicion del colectivo, por la longitud y latitud
+   setLatLong(posiciones: any[]) {  
  
      // Eliminar marcadores anteriores
   this.markers.forEach(marker => {
@@ -54,6 +77,7 @@ export class MapServicesService {
       const marker = new mapboxgl.Marker({
         element: this.createMarkerElement(this.busIcon)
       }).setLngLat([posicion.longitud, posicion.latitud]);
+      
       this.markers.push(marker);
       marker.addTo(this.map);
     });
@@ -76,8 +100,12 @@ export class MapServicesService {
     return el;
   }
 
+
+
+
   //seteo las paradas
   setMarkers(markers: any[]) {
+    
     // Elimina los marcadores anteriores del mapa
     this.mapMarkers.forEach((marker: mapboxgl.Marker) => {
       marker.remove();
@@ -92,12 +120,12 @@ export class MapServicesService {
       el.style.height = '15px';
     el.className = 'custom-marker';
     
-      
       const mapMarker = new mapboxgl.Marker(el)
         .setLngLat([marker.longitud, marker.latitud])
         .addTo(this.map);
       
       this.mapMarkers.push(mapMarker);
+      
     });
   }
     

@@ -11,6 +11,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import {MatTableModule} from '@angular/material/table';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -25,7 +26,7 @@ import { FormsModule } from '@angular/forms';
  MatDatepickerModule,
  MatFormFieldModule,
  MatSlideToggleModule,
- MatSelectModule,FormsModule
+ MatSelectModule,FormsModule,
   ],
   exports:[
     HomeComponent

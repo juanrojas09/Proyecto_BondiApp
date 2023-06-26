@@ -6,6 +6,7 @@ import { ZoomRangeComponent } from './map/zoom-range/zoom-range.component';
 import { MarcadoresComponent } from './map/marcadores/marcadores.component';
 import { MiniMapComponent } from './map/mini-map/mini-map.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AcercaDeComponent } from './map/acerca-de/acerca-de.component';
 
 
 const routes:Routes=[
@@ -32,6 +33,10 @@ const routes:Routes=[
   {
     path:'zoom-range',
     component:ZoomRangeComponent
+  },
+  {
+    path:'acerca-de',
+    component:AcercaDeComponent
   },
   {
     path:'**',

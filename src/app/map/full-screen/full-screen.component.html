@@ -1,3 +1,46 @@
 
-<div class="map" id="mapa" class="match-parent"></div>
+
+<div class="map" id="mapa" class="match-parent">
+    <div class="map" id="mapa">
+        <p>Disculpe las molestias</p>
+        <p>No es posible realizar los seguimientos en tiempo real de los colectivos por problemas tecnicos.</p>
+        <p>Podra ver y consultar los recorridos de las lineas y paradas.</p>
+        <p>Por favor, inténtelo de nuevo más tarde. Estamos trabajando para que se puedan seguir los colectivos sin inconvenientes.</p>
+        <p>Gracias.</p>
+    </div>
+</div>
+
+<style>
+    .map {
+        position: relative;
+        width: 200px;
+        height: 370px;
+        margin-top: 70px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: red;
+        z-index: 1000;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    @media screen and (max-width: 480px) {
+        .map {
+            width:30%; 
+            height: auto; 
+            top: 0;
+            left: 0;
+            margin-top: 100px; 
+            padding: 5px;
+            font-size: 10px; 
+        }
+    }
+</style>
 

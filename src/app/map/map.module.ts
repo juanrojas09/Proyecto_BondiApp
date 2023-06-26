@@ -6,6 +6,7 @@ import { PropertiesComponent } from './properties/properties.component';
 import { ZoomRangeComponent } from './zoom-range/zoom-range.component';
 import { MarcadoresComponent } from './marcadores/marcadores.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AcercaDeComponent } from './acerca-de/acerca-de.component';
 
 
 
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     FullScreenComponent,
     PropertiesComponent,
     ZoomRangeComponent,
-    MarcadoresComponent
+    MarcadoresComponent,
+    AcercaDeComponent
   ],
   imports: [
     CommonModule

@@ -122,7 +122,9 @@
   }
   
 
-
+  .selected-line {
+    background-color: green;
+  }
   .mapboxgl-marker {
     width: 30px;
     height: 30px;
@@ -154,4 +156,9 @@
   margin-top: -18px;
 
 }
-
+button {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }

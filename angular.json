@@ -64,7 +64,8 @@
               "browserTarget": "Bondi-App:build:production"
             },
             "development": {
-              "browserTarget": "Bondi-App:build:development"
+              "browserTarget": "Bondi-App:build:development",
+              "proxyConfig": "src/proxy.conf.js"
             }
           },
           "defaultConfiguration": "development"
